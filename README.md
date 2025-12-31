@@ -27,5 +27,5 @@ Para correr este proyecto localmente y ver los cambios en tiempo real, sigue est
 3. **Ejecutar tailwind en modo watch:**
     npm run dev
 
-📸 Preview (Mobile)
+## 📸 Preview (Mobile)
 <p align="center"> <img src="src/assets/img/preview-mobile.png" alt="Portfolio Preview" width="300"> </p>
