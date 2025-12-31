@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colores personalizados */
+  --color-primary-color: #FFFFFF;
+  --color-secondary-color: #000000;
+  --color-highlight-blue: #001AC2;
+
+  /* Fuentes personalizadas */
+  --font-geist: Geist, sans-serif;
+  --font-raleway: Raleway, sans-serif;
+
+  /* Estilo de botones */
+  --color-btn-primary: #001AC2;
+  --color-btn-alternate: rgba(0, 0, 0, 0.05);
+  --color-btn-font: #FFFFFF;
+  --color-btn-alternate-font: rgba(0, 0, 0, 0.70);
+  --color-btn-hover: rgba(115, 115, 115, 0.29);
+  --shadow-strong-inner: inset 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+
+  /* Otros estilos */
+  --color-soft-black: rgba(0, 0, 0, 0.10);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .custom-button {
+    @apply mt-2 px-6 py-3 rounded-full font-raleway font-semibold transition-all duration-200 ease-in-out;
+    @apply bg-btn-primary text-btn-font border-2 border-soft-black;
+
+    &:hover {
+      @apply bg-btn-hover text-white shadow-strong-inner;
+    }
+  }
+
+  .project-card {
+    @apply p-4 shadow-lg rounded-xl border border-gray-200 flex flex-col gap-3 max-w-md;
+    width: 270px;
+
+    /* Estilizamos la imagen interna usando una variable */
+    & img.project-thumb {
+      @apply w-full rounded-lg h-40 object-cover;
+      content: var(--project-img);
+      /* Aquí "inyectamos" la imagen */
+    }
+
+    & h3 {
+      @apply font-bold text-xl;
+    }
+
+    & p {
+      @apply text-gray-600;
+    }
+
+    & .tech-stack {
+      @apply flex -space-x-2;
+    }
+
+    /* Efecto de logos encimados sutil */
+    & .tech-stack img {
+      @apply w-6 h-6 border-2 border-white rounded-full bg-white;
+    }
+  }
+}
