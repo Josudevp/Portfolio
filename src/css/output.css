@@ -357,12 +357,12 @@ html {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     width: 270px;
-    & img.project-thumb {
+    & div.project-thumb {
       height: calc(var(--spacing) * 40);
       width: 100%;
       border-radius: var(--radius-lg);
-      object-fit: cover;
-      content: var(--project-img);
+      background-size: cover;
+      background-position: center;
     }
     & h3 {
       font-size: var(--text-xl);
