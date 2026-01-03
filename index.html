@@ -4,155 +4,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio - Josue Molina</title>
     <link href="./src/css/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/mouse-effect.css">
+
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
 </head>
 
-<body class="m-10 font-family-geist">
+<body class="m-10 font-family-geis relative">
 
-    <!-- Menu | NavBar -->
-    <i class="fi fi-br-menu-burger text-3xl cursor-pointer" id="navIcon"></i>
-    <nav id="mobile-menu"
-        class="fixed top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-center justify-center gap-8 transition-transform duration-300 ease-in-out -translate-x-full">
-        <i id="close-menu" class="fi fi-br-cross text-2xl absolute top-10 left-10 cursor-pointer"></i>
+    <div id="global-dot-tracking"></div>
 
-        <a href="#" class="text-2xl font-bold font-family-raleway">Home</a>
-        <a href="#stackScroll" class="text-2xl font-bold font-family-raleway">Stack</a>
-        <a href="#projectScroll" class="text-2xl font-bold font-family-raleway">Projects</a>
-        <a href="#contactScroll" class="text-2xl font-bold font-family-raleway">Contact</a>
-    </nav>
-    <!-- Hero Section -->
-    <div class="flex flex-col items-center text-center gap-y-1.5 mt-20">
-        <h1 class="text-3xl font-extrabold" >Code That Drives <span class="text-highlight-blue">Ideas</span></h1>
+    <div class="relative z-10">
 
-        <p class="text-pretty font-family-raleway font-medium">I am Josue, an aspiring Software Development Engineer
-            dedicated to building scalable solutions and turning complex requirements into high-quality digital
-            products.</p>
+        <!-- Mobile Navigation -->
 
-        <a href="#contactScroll" class="cursor-pointer" id="stackScroll"><button class="custom-button cursor-pointer">Get
-                in touch</button></a>
-    </div>
-
-    <!-- Stack Section -->
-    <div class="flex flex-col items-center text-center gap-y-6 mt-20">
-
-        <h2 class="font-extrabold font-family-raleway text-2xl">My Stack</h2>
-
-        <img src="src/assets/img/Foto-Josue.jpg" alt="Foto de Josue" class="hidden">
-
-        <div class="grid grid-cols-2 gap-6 max-w-md mt-3">
-
-            <div class="html flex gap-2 items-center justify-start">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-                    class="w-8 h-8" />
-                <p class="text-xs font-family-raleway">HTML</p>
+        <i class="fi fi-br-menu-burger text-3xl cursor-pointer min-[840px]:hidden " id="navIcon"></i>
+        <nav id="mobile-menu"
+            class="fixed top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-center justify-center gap-8 transition-transform duration-300 ease-in-out -translate-x-full">
+            <i id="close-menu" class="fi fi-br-cross text-2xl absolute top-10 left-10 cursor-pointer"></i>
+            <div class="flex items-center gap-2 justify-center text-2xl">
+                <i class="fi fi-rr-home"></i>
+                <a href="#" class="text-2xl font-bold font-family-raleway">Home</a>
             </div>
 
-            <div class="css flex gap-2 items-center justify-start">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-                    class="w-8 h-8" />
-                <p class="text-xs font-family-raleway">CSS</p>
+            <div class="flex items-center gap-2 justify-center text-2xl">
+                <i class="fi fi-ts-skill-alt"></i>
+                <a href="#stackScroll" class="text-2xl font-bold font-family-raleway">Stack</a>
             </div>
 
-            <div class="javascript flex gap-2 items-center justify-start">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                    class="w-8 h-8" />
-                <p class="text-xs font-family-raleway">JavaScript</p>
+            <div class="flex items-center gap-2 justify-center text-2xl">
+                <i class="fi fi-rr-briefcase"></i>
+                <a href="#projectScroll" class="text-2xl font-bold font-family-raleway">Projects</a>
+            </div>
+            <div class="flex items-center gap-2 justify-center text-2xl">
+                <i class="fi fi-rr-envelope-open-text text-2xl"></i>
+                <a href="#contactScroll" class="text-2xl font-bold font-family-raleway">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Desktop Navigation -->
+        <nav
+            class="hidden min-[840px]:flex justify-center items-center gap-8 mb-10 sticky top-2 w-fit z-20 bg-white/70 backdrop-blur-lg px-14 py-4 rounded-full shadow-lg mx-auto lg:text-lg xl:text-xl">
+            <div class="flex items-center gap-2 justify-center">
+                <i class="fi fi-rr-home"></i>
+                <a href="#" class="font-bold font-family-raleway">Home</a>
+            </div>
+            <div class="flex items-center gap-2 justify-center">
+                <i class="fi fi-ts-skill-alt"></i>
+                <a href="#stackScroll" class="font-bold font-family-raleway">Stack</a>
+            </div>
+            <div class="flex items-center gap-2 justify-center">
+                <i class="fi fi-rr-briefcase"></i>
+                <a href="#projectScroll" class="font-bold font-family-raleway">Projects</a>
+            </div>
+            <div class="flex items-center gap-2 justify-center">
+                <i class="fi fi-rr-envelope-open-text"></i>
+                <a href="#contactScroll" class="font-bold font-family-raleway">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <div
+            class="grid grid-cols-1 md:grid-cols-10 items-center gap-8 max-w-7xl mx-auto px-6 overflow-visible py-20 hero-section">
+            <div class="hidden md:flex md:col-span-4 h-[450px] items-center justify-center overflow-visible relative">
+                <script type="module"
+                    src="https://unpkg.com/@splinetool/viewer@1.12.29/build/spline-viewer.js"></script>
+
+                <spline-viewer url="https://prod.spline.design/Zvz3L7vbNf6dWGeT/scene.splinecode"
+                    class="w-full h-full spline-no-logo">
+                </spline-viewer>
+
+                <div class="hidden md:block absolute bottom-2 right-0 w-40 h-12 bg-white z-20"></div>
             </div>
 
-            <div class="figma flex gap-2 items-center justify-start">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
-                    class="w-8 h-8" />
-                <p class="text-xs font-family-raleway">Figma</p>
+            <div
+                class="col-span-full md:col-span-6 flex flex-col items-center md:items-start text-center md:text-left gap-y-4 z-10">
+                <h1 class="text-4xl font-extrabold md:text-5xl xl:text-7xl lg:tracking-wide leading-tight">
+                    Code That Drives <span class="text-highlight-blue">Ideas</span>
+                </h1>
+
+                <p class="text-pretty font-family-raleway font-medium lg:text-lg xl:text-xl text-gray-700 max-w-2xl">
+                    I am Josue, an aspiring Software Development Engineer dedicated to building scalable solutions and
+                    turning complex requirements into high-quality digital products.
+                </p>
+
+                <a href="#contactScroll" class="cursor-pointer" id="stackScroll">
+                    <button class="custom-button cursor-pointer lg:text-xl mt-8 lg:px-8">Get in touch</button>
+                </a>
+            </div>
+        </div>
+        <!-- Stack -->
+        <h2 class="font-extrabold text-2xl md:text-3xl lg:text-4xl text-center">My Stack</h2>
+
+        <div
+            class="flex flex-col items-center gap-y-12 md:flex-row md:gap-x-16 md:justify-center lg:gap-x-24 max-w-6xl mx-auto px-6">
+
+            <div class="shrink-0 hidden min-[640px]:block">
+                <img src="src/assets/img/Foto-Josue.jpg" alt="Josue" loading="lazy"
+                    class="img-mask w-64 h-64 lg:w-80 lg:h-80 rounded-full object-cover shadow-2xl border-8 border-gray-50">
             </div>
 
-            <div class="wordpress flex gap-2 items-center justify-start">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg"
-                    class="w-8 h-8" />
-                <p class="text-xs font-family-raleway">WordPress</p>
-            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8 w-full max-w-2xl max-[640]:mt-10">
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-center ">
+                        <div class="flex items-center gap-3">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                                loading="lazy" class="w-8 h-8" />
+                            <p class="font-bold font-family-raleway">HTML</p>
+                        </div>
+                        <span class="text-sm font-bold text-highlight-blue">95%</span>
+                    </div>
+                    <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-orange-500 h-2 rounded-full progress-bar" data-width="95" style="width: 0"></div>
+                    </div>
+                </div>
 
-            <div class="tailwindcss flex gap-2 items-center justify-start">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-                    class="w-8 h-8" />
-                <p class="text-xs font-family-raleway">TailwindCSS</p>
-            </div>
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                                loading="lazy" class="w-8 h-8" />
+                            <p class="font-bold font-family-raleway">CSS</p>
+                        </div>
+                        <span class="text-sm font-bold text-highlight-blue">90%</span>
+                    </div>
+                    <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-blue-500 h-2 rounded-full progress-bar" data-width="90" style="width: 0"></div>
+                    </div>
+                </div>
 
-            <div class="git flex gap-2 items-center justify-start">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-                    class="w-8 h-8" />
-                <p class="text-xs font-family-raleway">Git</p>
-            </div>
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                                loading="lazy" class="w-8 h-8" />
+                            <p class="font-bold font-family-raleway">JavaScript</p>
+                        </div>
+                        <span class="text-sm font-bold text-highlight-blue">50%</span>
+                    </div>
+                    <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-yellow-400 h-2 rounded-full progress-bar" data-width="50" style="width: 0"></div>
+                    </div>
+                </div>
 
-            <div class="mysql flex gap-2 items-center justify-start" id="projectScroll">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
-                    class="w-8 h-8" />
-                <p class="text-xs font-family-raleway ">MySQL</p>
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                                loading="lazy" class="w-8 h-8" />
+                            <p class="font-bold font-family-raleway">TailwindCSS</p>
+                        </div>
+                        <span class="text-sm font-bold text-highlight-blue">90%</span>
+                    </div>
+                    <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-sky-400 h-2 rounded-full progress-bar" data-width="90" style="width: 0"></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg"
+                                loading="lazy" class="w-8 h-8" />
+                            <p class="font-bold font-family-raleway">WordPress</p>
+                        </div>
+                        <span class="text-sm font-bold text-highlight-blue">30%</span>
+                    </div>
+                    <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full progress-bar" data-width="30" style="width: 0"></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                                loading="lazy" class="w-8 h-8" />
+                            <p class="font-bold font-family-raleway">Figma</p>
+                        </div>
+                        <span class="text-sm font-bold text-highlight-blue">75%</span>
+                    </div>
+                    <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-purple-500 h-2 rounded-full progress-bar" data-width="75" style="width: 0"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Projects -->
 
-    <div class="mt-20 flex flex-col items-center gap-y-6">
-        <h2 class="font-extrabold font-family-raleway text-2xl">Projects</h2>
-        <!-- #1 Project -->
-        <div class="project-card">
-            <div class="project-thumb" style="background-image: url('src/assets/img/img-project.jpg');"></div>
-            <h3>Portfolio Web</h3>
-            <p>Desarrollo de portafolio profesional con Tailwind v4.</p>
+    <h2 class="font-bold font-family-raleway text-2xl md:text-3xl mt-20 text-center">Projects</h2>
+    <div
+        class=" flex flex-col justify-center items-center gap-y-6 sm:grid sm:grid-cols-2 sm:gap-6 justify-items-center w-4/5 xl:w-4/6 mx-auto mt-10">
+
+        <div class="project-card w-full max-w-75 lg:max-w-md bg-white">
+            <div class="project-thumb bg-gray-200"></div>
+            <h3>Web Portfolio</h3>
+            <p>Professional portfolio development with Tailwind v4.</p>
             <div class="flex justify-between items-center mt-2">
                 <div class="tech-stack">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" loading="lazy" />
                     <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" loading="lazy" />
                 </div>
                 <a href="#" class="text-highlight-blue font-medium cursor-pointer">Check live site ⤤</a>
             </div>
         </div>
 
-        <!-- #2 Project -->
-        <div class="project-card">
-            <div class="project-thumb" style="background-image: url('src/assets/img/img-project-1.jpg');"></div>
-            <h3>Portfolio Web</h3>
-            <p>Desarrollo de portafolio profesional con Tailwind v4.</p>
+        <div class="project-card w-full max-w-75 lg:max-w-md bg-white">
+            <div class="project-thumb bg-gray-200"></div>
+            <h3>Web Portfolio</h3>
+            <p>Professional portfolio development with Tailwind v4.</p>
             <div class="flex justify-between items-center mt-2">
                 <div class="tech-stack">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" loading="lazy" />
                     <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" loading="lazy" />
                 </div>
                 <a href="#" class="text-highlight-blue font-medium cursor-pointer">Check live site ⤤</a>
             </div>
         </div>
 
-        <!-- #3 Project -->
-        <div class="project-card">
-            <div class="project-thumb" style="background-image: url('src/assets/img/img-project-2.jpg');"></div>
-            <h3>Portfolio Web</h3>
-            <p>Desarrollo de portafolio profesional con Tailwind v4.</p>
+        <div class="project-card w-full max-w-75 lg:max-w-md bg-white">
+            <div class="project-thumb bg-gray-200"></div>
+            <h3>Web Portfolio</h3>
+            <p>Professional portfolio development with Tailwind v4.</p>
             <div class="flex justify-between items-center mt-2">
                 <div class="tech-stack">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" loading="lazy" />
                     <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" loading="lazy" />
                 </div>
                 <a href="#" class="text-highlight-blue font-medium cursor-pointer">Check live site ⤤</a>
             </div>
         </div>
 
-        <!-- #4 Project -->
-        <div class="project-card">
-            <div class="project-thumb" style="background-image: url('src/assets/img/img-project-3.jpg');"></div>
-            <h3>Portfolio Web</h3>
-            <p>Desarrollo de portafolio profesional con Tailwind v4.</p>
+        <div class="project-card w-full max-w-75 lg:max-w-md bg-white">
+            <div class="project-thumb bg-gray-200"></div>
+            <h3>Web Portfolio</h3>
+            <p>Professional portfolio development with Tailwind v4.</p>
             <div class="flex justify-between items-center mt-2">
                 <div class="tech-stack">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" loading="lazy" />
                     <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" loading="lazy" />
                 </div>
                 <a href="#" class="text-highlight-blue font-medium cursor-pointer">Check live site ⤤</a>
             </div>
@@ -160,14 +259,15 @@
     </div>
 
     <!-- Contact -->
-
-    <div class="mt-20 flex flex-col items-center gap-y-6">
-        <h2 class="font-extrabold font-family-raleway text-2xl">Get in touch</h2>
-        <p class="text-pretty font-family-raleway font-medium max-w-md text-center">Feel free to reach out for
+    <div class="mt-30 flex flex-col items-center gap-y-4">
+        <h2 class="font-bold font-family-raleway text-2xl md:text-3xl text-center lg:text-4xl">Get in touch</h2>
+        <p class="text-pretty font-family-raleway font-medium max-w-md text-center md:text-lg lg:text-xl">Feel free
+            to reach out for
             collaborations or just a friendly chat.</p>
-        <div>
-            <a href="mailto:tu-correo@ejemplo.com?subject=Interés%20en%20tu%20perfil%20profesional&body=Hola%20Josue,"
-                class="cursor-pointer"><button id="contactScroll" class="custom-button cursor-pointer">Send Email</button></a>
+        <div class="flex items-center gap-6 mt-4">
+            <a href="mailto:jmolinaperez122@gmail.com?subject=Professional%20Interest&body=Hi%20Josue,"
+                class="cursor-pointer"><button id="contactScroll" class="custom-button cursor-pointer">Send
+                    Email</button></a>
 
             <a href="https://www.linkedin.com/in/josue-molinap/" target="_blank" rel="noopener noreferrer"
                 class="cursor-pointer"><button
@@ -175,15 +275,37 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <hr class="my-10 w-full border-soft-black">
     <div class="flex items-center gap-4 justify-center">
-        <p class="text-center text-sm text-gray-500">&copy; 2024 Josue. All rights reserved.</p>
+        <p class="text-center text-sm text-gray-700">&copy; 2026 Josue. All rights reserved.</p>
         <a href="https://github.com/Josudevp" target="_blank" rel="noopener noreferrer" class="cursor-pointer"><img
-                class="w-6 h-6"
+                class="w-6 h-6" loading="lazy"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" /></a>
     </div>
-    <script src="src/js/navegation.js"></script>
+    </div>
+    <script src="src/js/navigation.js"></script>
+    <script src="src/js/mouse-effect.js"></script>
+    <script>
+        // Intersection Observer for progressive progress bar animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const progressBars = document.querySelectorAll('.progress-bar');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bar = entry.target;
+                        const targetWidth = bar.getAttribute('data-width');
+                        setTimeout(() => {
+                            bar.style.width = targetWidth + '%';
+                        }, 100);
+                        observer.unobserve(bar);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            progressBars.forEach(bar => observer.observe(bar));
+        });
+    </script>
 </body>
 
 </html>

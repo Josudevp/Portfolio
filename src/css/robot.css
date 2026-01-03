@@ -1,0 +1,22 @@
+spline-viewer {
+    background: transparent !important;
+    /* Esto evita que el canvas bloquee clics en el botón si se superponen */
+    pointer-events: none;
+    overflow: visible !important;
+    /* Evita que se corte el brazo o cabeza al moverse */
+    clip-path: inset(0 0 60px 0);
+}
+
+/* Forzamos al canvas interno a ser nítido y centrado */
+spline-viewer::part(canvas) {
+    background: transparent !important;
+    /* Esto ayuda a que el renderizado no se vea limitado por el tamaño del div */
+    width: 120% !important;
+    height: 120% !important;
+    transform: scale(0.95);
+    transform-origin: center;
+}
+
+.hero-section {
+    min-height: calc(100vh - 120px);
+}

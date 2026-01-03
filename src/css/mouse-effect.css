@@ -1,0 +1,37 @@
+#global-dot-tracking {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    /* No interfiere con clics en tarjetas */
+    z-index: -1;
+    /* Se va al fondo total */
+
+    /* Patrón de puntos */
+    background-image: radial-gradient(#000000bf 1.5px, transparent 1.5px);
+    background-size: 22px 22px;
+
+    /* Máscara que revela los puntos */
+    -webkit-mask-image: radial-gradient(circle 250px at var(--mouse-x, -500px) var(--mouse-y, -500px),
+            black 0%,
+            rgba(0, 0, 0, 0.714) 40%,
+            transparent 100%);
+    mask-image: radial-gradient(circle 250px at var(--mouse-x, -500px) var(--mouse-y, -500px),
+            black 0%,
+            rgba(0, 0, 0, 0.2) 40%,
+            transparent 100%);
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    /* Suavizado para que se sienta fluido y no rígido */
+    transition: -webkit-mask-image 0.15s ease-out, mask-image 0.15s ease-out;
+}
+
+
+
+.progress-bar {
+    box-shadow: 0 0 7px rgba(75, 139, 242, 0.645);
+}

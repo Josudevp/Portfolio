@@ -42,7 +42,7 @@ html {
 
     /* Estilizamos la imagen interna */
     & div.project-thumb {
-      @apply w-full rounded-lg h-40;
+      @apply w-full rounded-lg h-48;
       background-size: cover;
       background-position: center;
     }
@@ -64,4 +64,13 @@ html {
       @apply w-6 h-6 border-2 border-white rounded-full bg-white;
     }
   }
+}
+
+.img-mask {
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, rgba(0,0,0,0.2) 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.037) 85%, transparent 100%);
+}
+
+.progress-bar {
+    transition: width 1.5s ease-in-out;
 }

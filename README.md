@@ -1,31 +1,38 @@
-# Portfolio Personal - Josue UI/UX 🚀
+# 🚀 Modern 3D Portfolio | Josue Molina
 
-¡Bienvenido a mi portafolio! Este es un proyecto desarrollado para mostrar mi trabajo como Software Development Engineer, enfocado en crear soluciones escalables y productos digitales de alta calidad.
+[![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-## ✨ Características
-- **Diseño Mobile-First**: Optimizado para una experiencia fluida en dispositivos móviles.
-- **Arquitectura de Componentes**: Uso de utilidades personalizadas mediante Tailwind CSS v4 para un código limpio y mantenible.
-- **Navegación Suave**: Implementación de Smooth Scroll nativo para una mejor UX.
-- **Stack de Tecnologías Moderno**: Integración de logos e iconos de alta calidad.
+Este portafolio es una vitrina de mis habilidades en Ingeniería de Software y Diseño UI/UX, combinando un rendimiento sólido con experiencias visuales inmersivas en 3D.
 
-## 🛠️ Tecnologías Utilizadas
-- **HTML5** y **CSS3**
-- **Tailwind CSS v4** (Motor de nueva generación)
-- **Google Fonts** (Raleway y Geist)
-- **Devicons** para el stack tecnológico
+## 🌟 Lo más destacado
+- **Interactividad 3D**: Integración de modelos Spline con control de cámara.
+- **Visuales Orgánicos**: Implementación de `mask-image` y `backdrop-blur` para una interfaz moderna y limpia.
+- **Arquitectura Escalable**: Configurado con Tailwind CSS v4 para una gestión de estilos ultra eficiente.
+- **UX Optimizada**: Navegación fluida con scroll-smooth y menús interactivos.
 
-## 🚀 Instalación y Uso Local
+## 🛠️ Tech Stack
+| Frontend | Herramientas | 3D / Diseño |
+| :--- | :--- | :--- |
+| HTML5 / CSS3 | Git / GitHub | Spline 3D |
+| JavaScript (ES6+) | NPM | Figma |
+| Tailwind CSS v4 | VS Code | Adobe Suite |
 
-Para correr este proyecto localmente y ver los cambios en tiempo real, sigue estos pasos:
+## 📦 Instalación y Desarrollo
+1. **Clonar:** `git clone https://github.com/Josudevp/tu-repositorio.git`
+2. **Dependencias:** `npm install`
+3. **Watch Mode:** `npm run dev`
 
-1. **Clonar el repositorio:**
-   git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
+## 📸 Galería de Vistas
+### Desktop Experience
+<p align="left"> 
+  <img src="src/assets/img/preview-desktop.png" alt="Desktop View" width="800" style="border-radius: 10px; border: 1px solid #eee"> 
+</p>
 
-2. **Instalar dependencias:**
-    npm install
+### Mobile First Design
+<p align="left"> 
+  <img src="src/assets/img/preview-mobile.png" alt="Mobile View" width="250" style="border-radius: 10px; border: 1px solid #eee"> 
+</p>
 
-3. **Ejecutar tailwind en modo watch:**
-    npm run dev
-
-## 📸 Preview (Mobile)
-<p align="center"> <img src="src/assets/img/preview-mobile.png" alt="Portfolio Preview" width="300"> </p>
+---
+Desarrollado con 💙 por Josue Molina.
